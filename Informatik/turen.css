@@ -1,0 +1,144 @@
+:root {
+    --blue: #3232CD;
+}
+
+body {
+    background:#f3f3f3;
+    color: #222222;
+
+    font-family: Helvetica,Arial,sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    margin: 0;
+}
+
+.grid-wrapper {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    
+    max-width: 1100px;
+    width: 95vw;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+
+    /* justify-content:space-between; */
+    /* height:auto; */
+
+    height:800px;
+    background-color: #f3f3f3;
+}
+
+.contained-cell {
+    margin: 5px;
+    padding: 20px;
+    width: 500px; /* width less margin less border */
+    background: #f3f3f3;
+    height: 2000px;
+    box-sizing: border-box;
+    overflow: scroll;
+}
+
+.content-cell {
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 1px solid #ccc;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-left: 4%;
+}
+
+/* Include the padding and border in an element's total width and height */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Remove margins and padding from the list */
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the list items */
+  ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: var(--blue);
+    color: white;
+    font-size: 18px;
+    transition: 0.2s;
+  
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  
+  
+  /* Darker background-color on hover */
+  ul li:hover {
+    background: #d3d3d3;
+  }
+  
+  /* When clicked on, add a background color and strike out text */
+  ul li.checked {
+    background: #fff;
+    color: #222222;
+    text-decoration: line-through;
+  }
+  
+ 
+  
+  /* Style the close button */
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+  }
+  
+  .close:hover {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  
+  /* Clear floats after the header */
+  .header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the input */
+  input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+  }
+
+.mapcontainer {
+    display: none;
+    width: 100%;
+}
