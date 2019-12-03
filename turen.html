@@ -1,0 +1,167 @@
+<!DOCTYPE html> 
+
+<head>
+    <title>
+        Turen
+    </title>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" type = "text/css" href = "turen.css" />
+    <link rel = "stylesheet" type = "text/css" href = "header.css" />
+</head>
+<body>
+        <div class="header">
+            <div class = "site-nav wrapper">
+                <a href="./index.html" style="margin-right: auto;">
+                    <h2 id="subtitle">
+                        Rejse til
+                    </h2>
+                    <h2 id="title" >
+                        Boston
+                    </h2>
+                </a>
+        
+                <a class="page-link" href="./udveksling.html">Udveksling</a>
+                <a class="page-link" href="./turen.html">Turen</a>
+                    <!-- <a class="weatherwidget-io" href="https://forecast7.com/da/42d36n71d06/boston/" data-label_1="VEJRET" data-font="nimbus-sans-light" data-mode="Current" data-theme="orange" data-basecolor="" data-accent="#222222" data-textcolor="#222222" data-highcolor="#222222" data-lowcolor="#222222" data-suncolor="#222222" data-mooncolor="#222222" data-cloudcolor="#222222" data-cloudfill="#222222" data-raincolor="#222222" data-snowcolor="#222222" >VEJRET</a>
+                    <script>
+                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js'); -->
+                    <!-- </script>    -->
+            </div>
+        </div>
+
+
+        <div class="grid-wrapper">
+            <div class="grid-container">
+                <div class="contained-cell"> 
+                    <div class="content-cell">
+                        <h2>
+                            Pakkeliste
+                        </h2>
+
+                        <ul id="myUL">
+                            <li>Rejsetøj</li>
+                            <li>Skjorte / pæne bluser</li>
+                            <li>Generelt tøj</li>
+                            <li>Slips og jakkesæt</li>
+                            <li>Godt fodtøj</li>
+                            <li>Langærmede trøjer</li>
+                            <li>Undertøj / sokker</li>
+                            <li>Idrætstøj</li>
+                            <li>Badetøj</li>
+                            <li>Toiletsager</li>
+                            <li>Håndklæde</li>
+                            <li>Pas</li>
+                            <li>Kopi af pas</li>
+                            <li>ESTA-godkendelse</li>
+                            <li>Gave til værtsfamilien</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-cell">
+                        <h2>
+                            Boston Tour-guide
+                        </h2>
+
+
+                       
+                    </div>
+
+                    <div class="content-cell">
+                        <h2>
+                            Pakkeliste
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="contained-cell"> 
+                    <div class="content-cell">
+                        <h2>
+                            Pakkeliste
+                        </h2>
+                    </div>
+
+                    <div class="content-cell">
+                        <h2>
+                            Pakkeliste
+                        </h2>
+                    </div>
+                </div>
+             </div>
+        </div>
+
+        
+</body>
+
+<script>
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("");
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+// Random fact
+    
+var facts = [
+            "Boston is actually named after a town in England",
+            "The first American lighthouse was built in Boston Harbor in 1716",
+            "Boston is home to the oldest public park in the U.S.",
+            "'Happy Hours' are against the law",
+            "The Fig Newton is named after a Boston suburb",
+            "The Red Sox have a patent on a color",
+            "Boston was home to the first U.S. chocolate factory",
+            "A deadly wave of molasses once flooded the North End",
+            "In turn-of-the-century Boston, you didn’t need to take a test to receive a driver’s license",
+            "The first U.S. subway was built here",
+            "Beantown really is about baked beans",
+            "You can drive 90 feet below the earth’s surface in Boston",
+            "Christmas was once banned",
+            "Boston is home to the first U.S. public beach",
+            "Boston gave us candlepin bowling",
+            "$100 million in paintings was stolen from a Boston museum",
+            "Some of Hollywood’s most recognizable stars are Bostonians",
+            "Bostonians get the weather from a skyscraper"
+        ];
+    
+        document.getElementById("fact").innerText = facts[getRandomInt(0,facts.length-1)];
+     
+        // Random Attraction
+        document.getElementById("map1").style.display = "block";
+    
+        function randomMaps() {
+            var mapContainers = document.getElementsByClassName("mapcontainer");
+            for(var i = 0; i < mapContainers.length; i++) {
+                mapContainers[i].style.display = "none";
+            }
+            var thisMap = document.getElementById("map" + getRandomInt(2,8));
+            thisMap.style.display = "block";
+        }
+    
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+</script>
+
