@@ -1,18 +1,6 @@
-:root {
-    --blue: #3232CD;
-}
-
 body {
-    background:#d3d3d3;
-    color: #222222;
-
-    font-family: Helvetica,Arial,sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    margin: 0;
-    overflow: hidden;
+    background: #d3d3d3;
 }
-
 
 hr {
     color: #222222;
@@ -25,10 +13,6 @@ hr {
     bottom: 0;
     max-width: 800px;
     width: 100%;
-}
-
-.mapcontainer {
-    display: none;
 }
 
 .map {
